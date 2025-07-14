@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sumit Aherwadkar | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #011328;
+            color: aliceblue;
+        }
+
+        /* Navbar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 50px;
+            height: 90px;
+            background-color: #12223f;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        nav .left {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #cbb8ff;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: rgb(76, 37, 101);
+            border-color: white;
+        }
+
+        /* First Section (Intro) */
+        .firstSection {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            padding: 50px 10%;
+        }
+
+        .leftSection {
+            flex: 1 1 45%;
+            font-size: 2.3rem;
+            line-height: 1.4;
+        }
+
+        .leftSection .intro-line {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .rightSection {
+            flex: 1 1 45%;
+            text-align: center;
+        }
+
+        .rightSection img {
+            max-width: 80%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 0 30px rgba(76, 37, 101, 0.4);
+        }
+
+        .red {
+            color: rgb(155, 98, 219);
+        }
+
+        #element {
+            color: rgb(134, 79, 168);
+        }
+
+        hr {
+            border: 0;
+            background: rgb(76, 37, 101);
+            height: 1.5px;
+            margin: 40px 10%;
+        }
+
+        /* Section Titles */
+        section {
+            padding: 60px 10%;
+            text-align: center;
+        }
+
+        section h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .box {
+            background: white;
+            width: 100%;
+            height: 2px;
+            margin: 20px auto;
+        }
+
+        /* Trainings Section */
+        .training-list {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .training-item {
+            background-color: #12223f;
+            padding: 20px;
+            border-left: 5px solid rgb(76, 37, 101);
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+            text-align: left;
+        }
+
+        .training-item:hover {
+            transform: scale(1.02);
+        }
+
+        .training-item h3 {
+            color: rgb(155, 98, 219);
+        }
+
+        .training-item p {
+            color: #d0d0d0;
+            margin: 5px 0;
+        }
+
+        /* Skills & Hobbies */
+        .skills-list,
+        .hobby-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .skills-list li,
+        .hobby-list li {
+            background-color: #1c2b4a;
+            padding: 10px 20px;
+            border-radius: 10px;
+            color: #e0d7ff;
+            box-shadow: 0 0 10px rgba(76, 37, 101, 0.2);
+            transition: 0.3s ease;
+        }
+
+        .skills-list li:hover,
+        .hobby-list li:hover {
+            background-color: #4c2565;
+        }
+
+        /* Education */
+        .education-item {
+            background-color: #12223f;
+            margin: 30px auto;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 5px solid rgb(76, 37, 101);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+            max-width: 800px;
+            text-align: left;
+        }
+
+        .education-item h3 {
+            color: rgb(155, 98, 219);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .firstSection {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav {
+                flex-direction: column;
+                padding: 20px;
+                height: auto;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 15px;
+                margin-top: 10px;
+            }
+
+            .leftSection {
+                font-size: 1.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .leftSection {
+                font-size: 1.5rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #0b1a33;
+            padding: 60px 10%;
+            color: aliceblue;
+            text-align: center;
+            border-top: 2px solid rgb(76, 37, 101);
+        }
+
+        footer h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: rgb(155, 98, 219);
+        }
+
+        footer .box {
+            width: 100%;
+            height: 2px;
+            background-color: white;
+            margin: 20px auto 30px;
+        }
+
+        footer p {
+            font-size: 1.1rem;
+            margin: 8px 0;
+            color: #d0d0d0;
+        }
+
+        footer a {
+            color: #9d7ad1;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Sumit's Portfolio</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#trainings">Trainings</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#hobbies">Hobbies</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Intro Section -->
+        <section class="firstSection" id="home">
+            <div class="leftSection">
+                <div class="intro-line">
+                    Hi, My name is <span class="red">Sumit Aherwadkar</span>
+                </div>
+                <div>I am Passionate</div>
+                <span id="element"></span>
+            </div>
+            <div class="rightSection">
+                <img src="Programmer-rafiki.svg" alt="Developer Illustration" />
+            </div>
+        </section>
+
+        <hr />
+
+        <!-- Trainings -->
+        <section id="trainings">
+            <span class="color-grey">What I have learned...</span>
+            <h1>Courses and Trainings</h1>
+            <div class="box"></div>
+            <div class="training-list">
+                <div class="training-item">
+                    <h3>C++ Programming</h3>
+                    <p><strong>Institution:</strong> Udemy</p>
+                    <p>Learned object-oriented programming concepts and data structures using C++.</p>
+                </div>
+                <div class="training-item">
+                    <h3>Industrial Training in Web Development</h3>
+                    <p><strong>Institution:</strong> Coding Circle Academy</p>
+                    <p>Trained in HTML, CSS, JavaScript, PHP, and MySQL for dynamic web development.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section class="skillsSection" id="skills">
+            <h1>Technical Skills</h1>
+            <div class="box"></div>
+            <ul class="skills-list">
+                <li>Java</li>
+                <li>OOP</li>
+                <li>C++</li>
+                <li>HTML & CSS</li>
+                <li>JavaScript</li>
+                <li>MySQL</li>
+            </ul>
+        </section>
+
+        <!-- Education -->
+        <section class="educationSection" id="education">
+            <h1>Education</h1>
+            <div class="box"></div>
+            <div class="education-item">
+                <h3>BE in Electronics and Telecommunication</h3>
+                <p>Pune Institute of Computer Technology, Pune</p>
+                <p><strong>GPA:</strong> 9.02 / 10</p>
+                <p><strong>Duration:</strong> 2024 - Present</p>
+            </div>
+            <div class="education-item">
+                <h3>Diploma in Computer Engineering</h3>
+                <p>Shri Shivaji Polytechnic Institute, Parbhani</p>
+                <p><strong>Percentage:</strong> 90.3%</p>
+                <p><strong>Duration:</strong> 2021 - 2024</p>
+            </div>
+            <div class="education-item">
+                <h3>10th (SSC)</h3>
+                <p>Abhinav Vidya Vihar High School, Purna</p>
+                <p><strong>Percentage:</strong> 91.6%</p>
+                <p><strong>Year:</strong> 2021</p>
+            </div>
+        </section>
+
+        <!-- Hobbies -->
+        <section class="hobbiesSection" id="hobbies">
+            <h1>Hobbies & Interests</h1>
+            <div class="box"></div>
+            <ul class="hobby-list">
+                <li>📚 Reading Non-Fiction Books</li>
+                <li>🌍 Travelling & Exploring New Places</li>
+            </ul>
+        </section>
+    </main>
+    <footer class="section" id="contact">
+        <h1>Contact Me</h1>
+        <div class="box"></div>
+        <p>Email: sumitaherwadkar85@gmail.com</p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/sumit-aherwadkar-0507b12b3/" target="_blank">linkedin.com/in/Sumit Aherwadkar</a></p>
+    </footer>
+
+    <!-- Typing JS -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Developer', 'Software Developer', 'UI/UX Designer'],
+            typeSpeed: 50,
+            backSpeed: 25,
+            loop: true
+        });
+    </script>
+</body>
+
+</html>
